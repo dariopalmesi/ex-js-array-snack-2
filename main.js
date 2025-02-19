@@ -74,6 +74,20 @@ console.log(discountedBooks);
 const fullPricedBook = discountedBooks[0]
 console.log(fullPricedBook);
 
+// Snack 3 - Ordinare gli Autori
+// Creare un array (authors) che contiene gli autori dei libri.
+const authors = books.map(book => book.author);
+console.log(authors);
+// Crea una variabile booleana (areAuthorsAdults) per verificare se gli autori sono tutti maggiorenni.
+const areAuthorsAduls = authors.every(author => author.age >= 18)
+console.log(areAuthorsAduls);
+// Ordina l’array authors in base all’età, senza creare un nuovo array.
+// (se areAuthorsAdult è true, ordina in ordine crescente, altrimenti in ordine decrescente)
+authors.sort((author1, author2) => author2.age - author1.age);
+console.log(authors);
+
+
+
 
 
 
